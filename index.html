@@ -9,11 +9,22 @@
 </head>
 <body>
    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
-   <div id="map"></div>
+ 
+   <!-- firebase test button -->
+   <button id="click-button">Click ME!!!</button>
 
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWLWqEBWNGnd4gZb_4lBMiIY1J-w3FNI4&callback=initMap"
-    async defer></script>
+   <input id="pac-input" class="controls" type="text"
+   placeholder="Enter a location">
+<div id="map"></div>
+<div id="infowindow-content">
+ <span id="place-name"  class="title"></span><br>
+ Place ID <span id="place-id"></span><br>
+ <span id="place-address"></span>
+</div>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWLWqEBWNGnd4gZb_4lBMiIY1J-w3FNI4&libraries=places&callback=initMap">
+    </script>
    <script src="assets/javascript/operations.js"></script>
 </body>
 </html>
