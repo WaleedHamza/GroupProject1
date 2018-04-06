@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel=stylesheet type="text/css" href="assets/css/style.css" />
+  <title>W.A.F.H.</title>
+</head>
+<body>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+   <div id="map"></div>
+
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWLWqEBWNGnd4gZb_4lBMiIY1J-w3FNI4&callback=initMap"
+    async defer></script>
+   <script src="assets/javascript/operations.js"></script>
+</body>
+</html>
