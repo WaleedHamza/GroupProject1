@@ -1,2 +1,2 @@
 # GroupProject1
-Using Multiple APIs this takes user input, finds job postings in an area and pins there locations on a map.
+Using Multiple APIs this takes user input, finds job postings in an area and pins their locations on a map.
