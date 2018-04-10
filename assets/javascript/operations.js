@@ -10,8 +10,6 @@
   };
   firebase.initializeApp(config);
 
-
-
   // firebase test
   var database = firebase.database();
   var clickCounter = 0;
@@ -25,80 +23,65 @@
 
 
   // google maps functions
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lng: -79.0249956, lat: 36.0017455},
-    zoom: 8
-  });
-}
-
-  var infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-
-  service.getDetails({
-    placeId: 'ChIJ8WYPEnHkrIkRfvJGionaeuE'
-  }, function(place, status) {
+  var map;
+  var infowindow;
+  function initMap() {
+    var durham = {lng: -78.9025080566, lat: 35.9883427133 };
+  
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: durham,
+      zoom: 10
+    });
+  
+    infowindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+    service.nearbySearch({
+      location: durham,
+      radius: 35000,
+      // change this to get different companies to display on map using searchCompanies array
+      name: ['IBM']
+    }, callback);
+  }
+  
+  function callback(results, status) {
+    // console.log(results);
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-          'Place ID: ' + place.place_id + '<br>' +
-          place.formatted_address + '</div>');
-        infowindow.open(map, this);
-      });
+      for (var i = 0; i < results.length; i++) {
+        createMarker(results[i]);
+      }
     }
+  }
+  
+  function createMarker(place) {
+    var placeLoc = place.geometry.location;
+    var marker = new google.maps.Marker({
+      map: map,
+      position: place.geometry.location
+    });
+  
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent(place.name);
+      infowindow.open(map, this);
+    });
+  }
+
+  // Zip recruiter api test and pushing company name and location into arrays 
+var searchCompanies = [];
+var locations = [];
+// take user input and place location here
+var searchPlace = "Durham, NC"
+var zipQueryURL = "https://api.ziprecruiter.com/jobs/v1?search=Perl%20Job&location="+ searchPlace +"&radius_miles=25&days_ago=&jobs_per_page=10&page=1&api_key=gjetj6yzdta73384442bezn9sp8tfwbe";
+
+  $.ajax({
+    url: zipQueryURL,
+    method: "GET"
+  }).then(function(response) {
+    for (var i = 0; i<response.jobs.length; i++) {
+    searchCompanies.push(response.jobs[i].hiring_company.name)
+    console.log(searchCompanies)
+    locations.push(response.jobs[i].location)
+    // console.log(locations)
+    };
   });
-  // function initMap() {
-  //   var map = new google.maps.Map(document.getElementById('map'), {
-  //     center: {lat: -33.8688, lng: 151.2195},
-  //     zoom: 13
-  //   });
 
-  //   var input = document.getElementById('pac-input');
 
-  //   var autocomplete = new google.maps.places.Autocomplete(input);
-  //   autocomplete.bindTo('bounds', map);
-
-  //   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-  //   var infowindow = new google.maps.InfoWindow();
-  //   var infowindowContent = document.getElementById('infowindow-content');
-  //   infowindow.setContent(infowindowContent);
-  //   var marker = new google.maps.Marker({
-  //     map: map
-  //   });
-  //   marker.addListener('click', function() {
-  //     infowindow.open(map, marker);
-  //   });
-
-  //   autocomplete.addListener('place_changed', function() {
-  //     infowindow.close();
-  //     var place = autocomplete.getPlace();
-  //     if (!place.geometry) {
-  //       return;
-  //     }
-
-  //     if (place.geometry.viewport) {
-  //       map.fitBounds(place.geometry.viewport);
-  //     } else {
-  //       map.setCenter(place.geometry.location);
-  //       map.setZoom(17);
-  //     }
-
-  //     // Set the position of the marker using the place ID and location.
-  //     marker.setPlace({
-  //       placeId: place.place_id,
-  //       location: place.geometry.location
-  //     });
-  //     marker.setVisible(true);
-
-  //     infowindowContent.children['place-name'].textContent = place.name;
-  //     infowindowContent.children['place-id'].textContent = place.place_id;
-  //     infowindowContent.children['place-address'].textContent =
-  //         place.formatted_address;
-  //     infowindow.open(map, marker);
-  //   });
-  // }
