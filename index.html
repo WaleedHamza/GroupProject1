@@ -64,22 +64,52 @@
                   </ul> -->
                 </div>
         </nav>
+<!-- jumbotron/waleed -->
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <!-- <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+    <a class="btn btn-primary btn-lg" id="searchBtn" role="button">Start Here!</a>
+
+    <div id="searchDiv">
+        <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="title" type="text" class="validate">
+                  <label for="icon_prefix">Title</label>
+                </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">place</i>
+                  <input id="address" type="text" class="validate">
+                  <label for="address">Address</label>
+                </div>
+              </div>
+              <div> 
+                  <a class="btn btn-primary btn-lg" id="goBtn" role="button">Go!</a>
+                </div>
+            </form>
+          </div>
+        <!-- <table>  
+             <tr  class="searchInput"> Search...</tr>
+            <br>
+            <input id="jobTitle" class="searchInput" type="text" placeholder="Title.."></input>
+            <input id="zipCode" class="searchInput" type="number" placeholder="Zipcode"> </input> 
+            <input id="salary" class="searchInput" type="number" placeholder="Salary Desired"> </input> 
+                
+
+          </table> -->
+    </div>
+  </div>
+</div>
 
 
+<!-- End of jumbotron/waleed -->
 <main class="container"> 
     <div class="row">
         <div id="leftCol"  class="col-sm-6">
-                <div id="searchDiv">
-                    <table>  
-                         <tr  class="searchInput"> Search...</tr>
-                        <br>
-                        <input id="jobTitle" class="searchInput" type="text" placeholder="Title.."></input>
-                        <input id="zipCode" class="searchInput" type="number" placeholder="Zipcode"> </input> 
-                        <input id="salary" class="searchInput" type="number" placeholder="Salary Desired"> </input> 
-                            
-        
-                      </table>
-                </div>
         <br>
         <div id="jobListing"><p>job list</p>
             <ul>
@@ -117,13 +147,14 @@
           <p class="grey-text text-lighten-4">We are based out of Durham, NC, with more than 20 thousand job posting in 50 states on our platform. Work"ALMOST" From Home has been named one of the Triangle’s Best Places to Work by the Triangle Business Journal. Job placement rate across the country over 1000 postion a month per second + free beer cupons!!</p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-          </ul>
+          <h5 class="white-text">Meet Our DevOps Team</h5>
+          <div id="devOps">
+            <div id="tim" class="circle" href="#!"></div>
+            <div id="adam" class="circle" href="#!"></div>
+            <div id="tony" class="circle" href="#!"></div>
+            <div id="ace" class="circle" href="#!"></div>
+            <div id="wal" class="circle" href="#!"></div>
+          </div>
         </div>
       </div>
     </div>

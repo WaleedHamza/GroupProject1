@@ -22,6 +22,22 @@
     clickCount: clickCounter
   });
 });
+//search buttoon functions//
+
+$("#searchBtn").click(function(){
+  $("#searchDiv").show(300);
+});
+$("#goBtn").click(function(){
+  var address = $("#address").val().trim();
+  var title = $("#title").val().trim();
+  if(title === "" && address === ""){
+    alert("Please tell us where should we look ?! ")
+    return false
+  }else{
+    $("#searchDiv").hide(300);
+  
+  }
+});
 
 
   // google maps functions
