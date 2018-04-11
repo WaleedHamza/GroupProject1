@@ -36,6 +36,7 @@ $("#goBtn").click(function(){
   address = $("#address").val().trim().replace(/\s/g, "+");
   title = $("#title").val().trim().replace(/\s/g, "+");
   
+  
 console.log("placesLocaion: " + address);
   // if(title === "" && address === ""){
   //   alert("Please tell us where should we look ?! ")
