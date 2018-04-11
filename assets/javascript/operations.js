@@ -37,6 +37,7 @@ $("#goBtn").click(function(){
     return false
   }else{
     $("#searchDiv").hide(300);
+    $("resultsDiv").show(1000)
   
   }
 });

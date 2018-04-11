@@ -39,27 +39,35 @@
     <title>Work (almost) From Home</title>
 </head>
 <body>
-    
-        <nav>
-                <div class="nav-wrapper">
-                  
-                  <a href="#" class="brand-logo center">Work (almost) from Home</a>
-
-
-                  </div>
-
-                </div>
-        </nav>
+            <nav id="header" class="navbar sticky-top navbar-light bg-light">
+                <a class="navbar-brand" href="#">Work (almost) from Home</a>
+                <div id="navButtons">
+                <a class="navBtn" href="#postAJob" class="active"><strong>Post a Job</strong></a>
+                <a class="navBtn" href="#contact"><strong>Contact</strong></a>
+                <a class="navBtn" href="#logIn"><strong>Log In</strong></a> 
+              </div>               
+              </nav>
 
 <!-- parallax -->
 <div class="parallax-container">
-  <div id="a" class="parallax"><img src="assets/images/jt2.jpg"></div>
+  <div id="a" class="parallax"></div>
 </div>
 <div class="section white">
   <div class="row container">
-    <h2 class="header">Parallax</h2>
-    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-  
+    <h2 class="header">Over 8 Million Jobs</h2>
+    <p class="grey-text text-darken-3 lighten-3">There's no need to look anywhere else. With over 8 million jobs,This is the only site you'll ever need to find your next job.</p>
+  <br>
+  <p>
+    var jobless = $(workAlmostFromHome).click(function({
+      if (currentJobSucks === true && sadBoss === true){
+        var jobSearch = $(this).findNewJob
+        return results
+      }else{
+        find beer
+      }
+    })
+    )
+  </p>
 <!--  -->
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -94,7 +102,40 @@
   </div>
 </div>
 <div class="parallax-container">
-  <div id="b" class="parallax"><img src="assets/images/jt1.jpg"></div>
+  <div id="b" class="parallax">
+    <main id="resultsDiv" class="container"> 
+      <div class="row">
+          <div id="leftCol"  class="col-sm-6">
+          <br>
+          <div id="jobListing"><p>job list</p>
+              <ul>
+                  <li>Job Description</li>
+                  <li>Job Description</li>
+                  <li>Job Description</li>
+                  <li>Job Description</li>
+                  <li>Job Description</li>
+                  <li>Job Description</li>
+              </ul>
+          </div>
+      </div>
+          
+      <div id="rightCol" class="col-sm-6">
+          <div id="map"></div>
+  <div id="infowindow-content">
+   <span id="place-name"  class="title"></span><br>
+   <span id="place-id"></span><br>
+   <span id="place-address"></span>
+  </div>
+      </div>
+  </div>
+  </div>      
+  
+  
+  
+  
+  </main>
+  
+  </div>
 </div>
 <!-- end parallax -->
 
@@ -106,37 +147,6 @@
 
 
 <!-- End of jumbotron/waleed -->
-<main class="container"> 
-    <div class="row">
-        <div id="leftCol"  class="col-sm-6">
-        <br>
-        <div id="jobListing"><p>job list</p>
-            <ul>
-                <li>Job Description</li>
-                <li>Job Description</li>
-                <li>Job Description</li>
-                <li>Job Description</li>
-                <li>Job Description</li>
-                <li>Job Description</li>
-            </ul>
-        </div>
-    </div>
-        
-    <div id="rightCol" class="col-sm-6">
-        <div id="map"></div>
-<div id="infowindow-content">
- <span id="place-name"  class="title"></span><br>
- <span id="place-id"></span><br>
- <span id="place-address"></span>
-</div>
-    </div>
-</div>
-</div>      
-
-
-
-
-</main>
 
 <footer class="page-footer">
     <div class="container">
