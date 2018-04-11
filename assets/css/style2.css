@@ -30,11 +30,15 @@
   }
   #searchBtn{
     margin-bottom: 10px;
+    background-color: #e53935;
+    color: white;
   }
   #goBtn{
     position: relative;
     float: right;
     clear: both;
+    background-color: #283593;
+    color: white;
   }
   
   main {
@@ -76,6 +80,7 @@
   tr {
     margin-left: 10px;
   }
+  
   .searchInput {
     margin-left:5px;
     margin-bottom: 10px;
@@ -88,11 +93,7 @@
     display:none;
     width: 150%;
   }
-  
-  
-  .page-footer {
-    background-color: #7986cb;
-  }
+
   #devOps{
     display: flex;
     flex-direction:row;
@@ -146,11 +147,11 @@
   }
   
   #footer-copyright {
-    background-color: #7986cb;
+    background-color: #283593;
     text-align: center;
   }
   .page-footer {
-    background-color: #7986cb;
+    background-color: #283593;
   }
   
   
