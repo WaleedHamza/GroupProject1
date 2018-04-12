@@ -29,9 +29,10 @@ $(document).ready(function(){
 var address = "";
 var title = "";
 
-$("#searchBtn").click(function(){
-  $("#searchDiv").show(300);
-});
+// $("#searchBtn").click(function(){
+//   $("#searchDiv").show(300);
+// });
+
 $("#goBtn").click(function(){
   address = $("#address").val().trim().replace(/\s/g, "+");
   title = $("#title").val().trim().replace(/\s/g, "+");
