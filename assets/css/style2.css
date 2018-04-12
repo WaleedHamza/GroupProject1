@@ -6,6 +6,7 @@
     border-radius: 10px;
     
   }
+
   body {
     margin:0 auto;
     background: linear-gradient(to bottom , rgba(70, 73, 80, 0.5), rgba(70, 73, 80, 0.5));
@@ -14,32 +15,51 @@
     min-height: 100vh;
     flex-direction: column;
   }
+
+
+  .section-white {
+    background-color: #338533;
+    background-image: url("https://www.transparenttextures.com/patterns/clean-textile.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    padding-bottom: 5%;
+    text-align: center;
+}
   
-  #a{
+  #a { 
       background-image: url("../images/WFH1.jpg");
       background-size:cover;
   }
 
-  #b{
+  #b {
     background-image: url("../images/WFH.jpg");
     background-size: cover;
     background-position-y: 0em;
   }
-  .jumbotron{
-    /* background-image: url("../images/WFH.jpg");
-    background-size:cover; */
-    background: white;
-  }
-  #searchBtn{
-    margin-bottom: 10px;
-    background-color: #e53935;
-    color: white;
-  }
-  #goBtn{
+
+h2 {
+  color: white;
+}  
+
+#searchDiv {
+  border:1px solid black;
+  box-shadow:2px 2px 10px darkgray;
+  width: 140%;
+  background-color: whitesmoke;
+  padding: 5%;
+}
+ 
+#job-title, #home-address, #goBtn {
+  display: inline;
+  margin: 5%;
+}
+
+
+
+
+  #goBtn {
     position: relative;
     float: right;
-    clear: both;
-    background-color: #283593;
+    background-color: #e53935;;
     color: white;
   }
   
@@ -51,23 +71,26 @@
     background-color: #283593;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   }
-  #navButtons{
+  #navButtons {
     position: relative;
     float: right;
   }
 
-
   .navBtn {
+    clear: both;
+    overflow: auto;
     color:darkgrey;
     margin-left: 10px;
     padding:20px;
   }
-  .navBtn:hover{
+
+  .navBtn:hover { 
     /* text-shadow: 20px 20px 20px black; */
     color:#283593;
     text-decoration: none;
     border-bottom: 4px solid #283593;
   }
+
   #leftCol {
     /* border:1px solid black; */
     /* box-shadow:2px 2px 10px whitesmoke; */
@@ -76,7 +99,7 @@
     /* margin-right:10px; */
   }
   
-  #map{
+  #map {
     box-shadow:2px 2px 10px black;
   }
   #rightCol {
@@ -95,19 +118,10 @@
   tr {
     margin-left: 10px;
   }
-  
-  .searchInput {
-    margin-left:5px;
-    margin-bottom: 10px;
-    width:90%;
-  }
-  #searchDiv {
-   border:1px solid black;
-    border-radius: 10px;
-    box-shadow:2px 2px 10px darkgray;
-    display:none;
-    width: 150%;
-  }
+ 
+
+
+
 #resultsDiv{
   display:none;
 }
@@ -120,46 +134,48 @@
   .circle {
       width: 100px;
       height: 100px;
-      -moz-border-radius: 50px;
-      -webkit-border-radius: 50px;
-    border-radius: 50px;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
     
   }
   
-  #tim{
+  #tim {
    background-image: url("../images/tim.png");
   background-size: cover;
   box-shadow:2px 2px 10px black;
   }
-  #adam{
+
+  #adam {
     background-image: url("../images/adam.png");
    background-size: cover;
    box-shadow:2px 2px 10px black;
    }
   
-   #tony{
+   #tony {
     background-image: url("../images/tony.png");
    background-size: cover;
    box-shadow:2px 2px 10px black;
    }
   
-   #ace{
+   #ace {
     background-image: url("../images/ace.png");
    background-size: cover;
    box-shadow:2px 2px 10px black;
    }
   
-   #wal{
+   #wal {
     background-image: url("../images/wal.png");
     background-size: cover;
     box-shadow:2px 2px 10px black;
    }
   
-  #iconsRow{
+  #iconsRow {
     display: flex;
     justify-content: flex-end;
   }
-  .socialMediaIcons{
+
+  .socialMediaIcons {
     margin-left: 25px;
     
   }

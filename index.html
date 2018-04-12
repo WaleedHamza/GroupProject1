@@ -52,13 +52,13 @@
 <div class="parallax-container">
   <div id="a" class="parallax"></div>
 </div>
-<div class="section white">
+<div class="section-white">
   <div class="row container">
-    <h2 class="header">Over 8 Million Jobs</h2>
-    <p class="grey-text text-darken-3 lighten-3">There's no need to look anywhere else. With over 8 million jobs,This is the only site you'll ever need to find your next job.</p>
+    <h2 class="header">Search now!</h2>
+    <!-- <p class="grey-text text-darken-3 lighten-3">There's no need to look anywhere else. With over 8 million jobs,This is the only site you'll ever need to find your next job.</p> -->
   <br>
-  <p>
-    var jobless = $(workAlmostFromHome).click(function({
+  <!-- <p>
+    <! var jobless = $(workAlmostFromHome).click(function({
       if (currentJobSucks === true && sadBoss === true){
         var jobSearch = $(this).findNewJob
         return results
@@ -66,32 +66,28 @@
         find beer
       }
     })
-    )
-  </p>
+    ) -->
+  <!-- </p> --> 
 <!--  -->
-<div class="jumbotron jumbotron-fluid">
   <div class="container">
-
-    <a class="waves-effect waves-light btn btn-primary btn-lg" id="searchBtn" role="button">Start Here!</a>
-
 
     <div id="searchDiv">
         <div class="row">
-            <form class="col s12">
+            <form> 
               <div class="row">
-                <div class="input-field col s6">
+                <div class="job-title"> 
                   <i class="material-icons prefix">account_circle</i>
                   <input id="title" type="text" class="validate">
                   <label for="icon_prefix">Job Title</label>
                 </div>
-                <div class="input-field col s6">
+                <div class="home-address">
                   <i class="material-icons prefix">place</i>
                   <input id="address" type="text" class="validate">
                   <label for="address">Street Address</label>
                 </div>
               </div>
               <div> 
-                  <a class="btn btn-primary btn-lg" id="goBtn" role="button">Go!</a>
+                  <a class="waves-effect waves-light btn btn-primary btn-lg" id="goBtn" role="button">Search Now!</a>
                 </div>
             </form>
           </div>
@@ -190,8 +186,13 @@
         </div>
         
       </div>
-      <div id="footer-copyright"> © 2018 Team Awesome Sauce</div>
+      <div id="footer-copyright">
+      <div> © 2018 Team Awesome Sauce</div>
+      <br>
+      <br>
       <a href="https://www.ziprecruiter.com/jobs" id="jobs_widget_link"><span>Job Search by</span> <span id="zr_logo_container"><img id="zr_logo" src="https://www.ziprecruiter.com/img/logos/logo-sm-black-304px.png" alt="ZipRecruiter" width="120" /></span></a>
+      
+      
     </div>
       </footer>
 
