@@ -1,4 +1,8 @@
-
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
+  
+  
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCgDG1Tbqa6nmT9dK0V8mxNB97H6njq2OU",
@@ -25,12 +29,14 @@
 var address = "";
 var title = "";
 
-$("#searchBtn").click(function(){
-  $("#searchDiv").show(300);
-});
+// $("#searchBtn").click(function(){
+//   $("#searchDiv").show(300);
+// });
+
 $("#goBtn").click(function(){
   address = $("#address").val().trim().replace(/\s/g, "+");
   title = $("#title").val().trim().replace(/\s/g, "+");
+  
   
 console.log("placesLocaion: " + address);
   // if(title === "" && address === ""){
