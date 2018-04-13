@@ -51,8 +51,8 @@ console.log("placesLocaion: " + address);
     url: "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + address + "&search=" + title + "&key=AIzaSyDYL3PAu6qXoGN_ii_Ld_cfYCQ7FY-AMl0",
     method: "GET"
   }).then(function(spot) {
-    console.log(spot.results["0"].geometry.location.lat);
-    console.log(spot.results["0"].geometry.location.lng);
+    // console.log(spot.results["0"].geometry.location.lat);
+    // console.log(spot.results["0"].geometry.location.lng);
     initMap(spot.results["0"].geometry.location.lat, spot.results["0"].geometry.location.lng)
   })
 
@@ -65,15 +65,44 @@ console.log("placesLocaion: " + address);
     url: zipQueryURL,
     method: "GET"
   }).then(function(response) {
+    console.log(response)
     for (var i = 0; i<response.jobs.length; i++) {
     searchCompanies.push(response.jobs[i].hiring_company.name)
     //console.log(searchCompanies)
     locations.push(response.jobs[i].location)
     // console.log(locations)
+    searchJobs.push(response.jobs[i].name)
     };
     console.log(searchCompanies);
-    console.log(searchCompanies[1]);
+    console.log(searchJobs);
+    console.log(locations);
 });
+
+
+
+
+// // My attempt at adding company names and jobs to UL ---- NOT WORKING YET
+
+// function makeUL(array) {
+//   // Create the list element:
+//   var list = document.createElement('ul');
+//   for(var i = 0; i < array.length; i++) {
+//       // Create the list item:
+//       var item = document.createElement('li');
+//       // Set its contents:
+//       item.appendChild(document.createTextNode(array[i]));
+//       // Add it to the list:
+//       list.appendChild(item);
+//   }
+//   // Finally, return the constructed list:
+//   return list;
+// }
+// // Add the contents of options[0] to #foo:
+// document.getElementById('foo').appendChild(makeUL(options[0]));
+
+
+
+
 
   // google maps functions
   var map;
@@ -122,6 +151,7 @@ console.log("placesLocaion: " + address);
 
   // Zip recruiter api test and pushing company name and location into arrays 
 var searchCompanies = [];
+var searchJobs = [];
 var locations = [];
 // take user input and place location here
 // var searchPlace = "durham";
