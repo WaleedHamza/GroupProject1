@@ -23,18 +23,12 @@ body {
 
 #searchBtn{
   margin-bottom: 10px;
-  background-color: #e53935;
-  color: white;
-  
 }
 
 #goBtn{
   position: relative;
   float: right;
   clear: both;
-  background-color: #283593;
-  color: white;
-  
 }
 
 main {
@@ -42,9 +36,7 @@ main {
 }
 
 nav {
-  background-color: #283593;
-  box-shadow: 2px 2px 10px black;
-
+  background-color: #1a237e;
 }
 
 /* #nav-links {
@@ -97,7 +89,7 @@ tr {
   background-color: #7986cb;
 }
 
-#devOps {
+#devOps{
   display: flex;
   flex-direction:row;
 }
@@ -110,52 +102,50 @@ tr {
   border-radius: 50px;  
 }
 
-#tim {
+#tim{
  background-image: url("../images/tim.png");
 background-size: cover;
 box-shadow:2px 2px 10px black;
 }
 
-#adam {
+#adam{
   background-image: url("../images/adam.png");
  background-size: cover;
  box-shadow:2px 2px 10px black;
  }
 
- #tony {
+ #tony{
   background-image: url("../images/tony.png");
  background-size: cover;
  box-shadow:2px 2px 10px black;
  }
 
- #ace {
+ #ace{
   background-image: url("../images/ace.png");
  background-size: cover;
  box-shadow:2px 2px 10px black;
  }
 
- #wal {
+ #wal{
   background-image: url("../images/wal.png");
   background-size: cover;
   box-shadow:2px 2px 10px black;
  }
 
-#iconsRow {
+#iconsRow{
   display: flex;
   justify-content: flex-end;
 }
 
-
-.socialMediaIcons {
-  margin-left: 25px;
-  color: white;
+.socialMediaIcons{
+  margin-left: 25px;  
 }
 
 #footer-copyright {
-  background-color: #283593;
+  background-color: #7986cb;
   text-align: center;
 }
 
 .page-footer {
-  background-color: #283593;
+  background-color: #7986cb;
 }
